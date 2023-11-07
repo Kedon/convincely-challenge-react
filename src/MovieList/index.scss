@@ -1,0 +1,30 @@
+@import '../colors.scss';
+
+.movieList {
+  padding: 18px;
+  font-size: 0.9rem;
+
+  &__header {
+    position: relative;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 240px); // Create 4 equal-width columns
+    grid-gap: 20px; // Adjust the gap between grid items as needed
+    margin: 0 auto;
+    justify-content: center; // Center the grid horizontally
+    align-content: center; // Center the grid vertically
+    // .grid-item {
+    //   background-color: #f2f2f2; // Set a background color for grid items
+    //   padding: 20px; // Add padding to separate content from the grid cell
+    //   text-align: center; // Center-align text within grid items
+    
+    //   // You can add more styling as needed for your specific use case
+    // }
+  }
+  .filterAarea {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../colors.scss';
+
+.card {
+  position: relative;
+  background: $color-white;
+  border-radius: 6px;
+  &__banner {
+    background: $color-gray--dark;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px 6px 0 0;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__runtime {
+    font-size: 16px;
+  }
+}
