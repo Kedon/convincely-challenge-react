@@ -25,6 +25,17 @@ const MovieList = () => {
     });
   }, []);
 
+  const filteredMovies = movies.filter((movie: MovieData) => {
+    return !filter || movie.name.toLowerCase().includes(filter.toLowerCase());
+  });
+
+  const sortedMovies = sort
+    ? filteredMovies.slice().sort((a: MovieData, b: MovieData) => {
+        return b.boxOfficeRevenueInMillions - a.boxOfficeRevenueInMillions;
+      })
+    : filteredMovies;
+
+
   return (
     <div className="movieList">
       <header className="movieList__header">
@@ -47,16 +58,7 @@ const MovieList = () => {
         </div>
       </header>
       <main className="movieList__items">
-        {movies
-        .filter((movie: MovieData) => {
-          if(!filter) return true;
-          return movie.name.toLowerCase().includes(filter.toLowerCase());
-        })
-        .sort((a: MovieData, b: MovieData) => {
-          if(!sort) return 0;
-          return b.boxOfficeRevenueInMillions - a.boxOfficeRevenueInMillions;
-        })
-        .map((movie: MovieData, index: number) => {
+        {sortedMovies.map((movie: MovieData, index: number) => {
           return (
             <MovieCard key={`item_${index}`} data={movie} />
           )
