@@ -6,11 +6,14 @@
   border-radius: 6px;
   &__banner {
     background: $color-gray--dark;
-    height: 140px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px 6px 0 0;
+  }
+  &__description {
+    padding: 20px;
   }
   &__title {
     font-weight: 600;
@@ -19,5 +22,31 @@
   }
   &__runtime {
     font-size: 16px;
+    margin-top: 10px;
+  }
+
+  &__awards {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+    span {
+      margin-left: 5px;
+    }
+  }
+  .card_metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+      span:first-child {
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
   }
 }

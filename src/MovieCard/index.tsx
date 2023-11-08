@@ -17,21 +17,27 @@ const MovieCard = (props: Props) => {
       <div className='card__banner'>
         <img src={filmIcon} className='card__banner__icon' />
       </div>
+      <div className="card__description">
       <span className='card__title'>{data.name}</span>
       <div className='card__runtime'>{data.runtimeInMinutes}</div>
 
-      <div className='card_awards'>
+      <div className='card__awards'>
         <img src={awardIcon} className='card__awards__icon' />
         <span>{data.academyAwardWins} Wins & {data.academyAwardNominations} Nominations</span>
       </div>
 
       <div className='card_metrics'>
-        <span>Budget</span>
-        <span>${data.budgetInMillions}</span>
-
-        <span>Revenue</span>
-        <span>${data.boxOfficeRevenueInMillions}</span>
+        <div className="card_metrics__item">
+          <span>Budget</span>
+          <span>${data.budgetInMillions}</span>
+        </div>
+        <div className="card_metrics__item">
+          <span>Revenue</span>
+          <span>${data.boxOfficeRevenueInMillions}</span>
+        </div>
       </div>
+      </div>
+
     </div>
   );
 }

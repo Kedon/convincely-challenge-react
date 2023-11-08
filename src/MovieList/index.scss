@@ -6,6 +6,25 @@
 
   &__header {
     position: relative;
+    max-width: 1020px;
+    margin: 0 auto;
+    border-bottom: solid 1px $color-gray--medium;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    color: $text-color--primary;
+    input, select {
+      padding: 10px;
+      border: solid 1px $color-gray--medium;
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+    .filterAarea {
+      display: flex;
+      justify-content: space-between;
+      align-items: last baseline;
+    }
+  
   }
 
   &__items {
@@ -22,9 +41,5 @@
     
     //   // You can add more styling as needed for your specific use case
     // }
-  }
-  .filterAarea {
-    display: flex;
-    justify-content: space-between;
   }
 }

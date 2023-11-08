@@ -15,6 +15,7 @@ function Layout() {
           <span className="headline__applicant-name">Front end developer</span>
         </div>
       </header>
+      <hr/>
       <main>
         <MovieList/>
       </main>
